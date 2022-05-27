@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "362108831597",
+    "project_id": "badi-c22-ps174",
+    "storage_bucket": "badi-c22-ps174.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362108831597:android:35396c3b9e1e658558fc64",
+        "android_client_info": {
+          "package_name": "badi.capstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362108831597-0vcdhpj1nt4eb94aq8jusm3kqasp52mk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChEHmVOxJGCx-JJrws_X19qSTQVIqJ8Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362108831597-0vcdhpj1nt4eb94aq8jusm3kqasp52mk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362108831597:android:cb0dcb1f4d75750e58fc64",
+        "android_client_info": {
+          "package_name": "com.capstone.badi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362108831597-0vcdhpj1nt4eb94aq8jusm3kqasp52mk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChEHmVOxJGCx-JJrws_X19qSTQVIqJ8Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362108831597-0vcdhpj1nt4eb94aq8jusm3kqasp52mk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362108831597:android:05db2a88b53a892758fc64",
+        "android_client_info": {
+          "package_name": "com.riziq.mybadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362108831597-0vcdhpj1nt4eb94aq8jusm3kqasp52mk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChEHmVOxJGCx-JJrws_X19qSTQVIqJ8Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362108831597-0vcdhpj1nt4eb94aq8jusm3kqasp52mk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
