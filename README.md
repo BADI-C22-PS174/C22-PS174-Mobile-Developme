@@ -1,4 +1,4 @@
-## REFERENCE LIBRARY / API DOCUMENTATION
+## LIBRARY DOCUMENTATION
 
     //layout
     implementation fileTree(dir: 'libs', include: ['*.jar'])
