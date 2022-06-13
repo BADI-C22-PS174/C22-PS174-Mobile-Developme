@@ -10,13 +10,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.badi.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
-
 class RegisterActivity: AppCompatActivity() {
 
     //viewBinding
     private lateinit var registerBinding: ActivityRegisterBinding
     //viewModel
-
     private lateinit var progressDialog: ProgressDialog
 
     //firebase
@@ -30,7 +28,6 @@ class RegisterActivity: AppCompatActivity() {
         setContentView(registerBinding.root)
 
         supportActionBar?.hide()
-
         //config progressDialog
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("please wait")
@@ -39,24 +36,16 @@ class RegisterActivity: AppCompatActivity() {
 
         //init firebase
         firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
 
         registerBinding.btnLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
 
         //register click
         registerBinding.myRegister.setOnClickListener {
             validateData()
 
-        }
-    }
-    private fun checkUser() {
-        //if already logged
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser != null){
-            startActivity(Intent(this, MainActivity::class.java))
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            finish()
         }
     }
 
@@ -97,7 +86,7 @@ class RegisterActivity: AppCompatActivity() {
                     "Account created with email $email",
                     Toast.LENGTH_SHORT
                 ).show()
-                startActivity(Intent(this, WelcomeActivity::class.java))
+                startActivity(Intent(this, ProfileActivity::class.java))
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 finish()
             }

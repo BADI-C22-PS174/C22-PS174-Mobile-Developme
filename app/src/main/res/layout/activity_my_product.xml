@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_product_display"
+    android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/your_products_section"
+    android:backgroundTint="#00C853"
+    tools:context=".menuHome.myProduct.ui.main.MyProductActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_products"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/red_200"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="Add Products"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/pink_500"
+        app:icon="@drawable/ic_add_shopping_products_24"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/no_image_relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_products"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/no_image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_image_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="No Products found. Add a few !"
+            android:textAlignment="center"
+            android:textColor="#DA7AC1FD"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_effect_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_products"
+        android:layout_centerInParent="true"
+
+        android:foregroundGravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="658dp"
+        android:layout_alignTop="@+id/add_products"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="4dp"
+        tools:listitem="@layout/your_products_adapter_view" />
+
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:elevation="10dp"-->
+<!--        android:padding="8dp">-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/p_image"-->
+<!--            android:layout_width="273dp"-->
+<!--            android:layout_height="206dp"-->
+<!--            android:contentDescription="product_image"-->
+<!--            android:src="@drawable/no_image_icon"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.148" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/p_name"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_toEndOf="@id/p_image"-->
+<!--            android:hint="Product Name"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/p_image" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/add_p_description"-->
+<!--            android:layout_width="273dp"-->
+<!--            android:layout_height="83dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:autofillHints="Add description of your product"-->
+<!--            android:background="@color/white"-->
+<!--            android:elevation="5dp"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Add description of your product"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:maxWidth="300dp"-->
+<!--            android:maxHeight="200dp"-->
+<!--            android:maxLines="4"-->
+<!--            android:overScrollMode="always"-->
+<!--            android:padding="30dp"-->
+<!--            android:scrollbarStyle="insideInset"-->
+<!--            android:scrollbars="vertical"-->
+<!--            android:textIsSelectable="true"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/p_category" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/add_p_market_price"-->
+<!--            android:layout_width="143dp"-->
+<!--            android:layout_height="31dp"-->
+<!--            android:layout_below="@id/p_name"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_toEndOf="@id/p_image"-->
+<!--            android:background="@drawable/social_media_btn"-->
+<!--            android:backgroundTint="#FFD600"-->
+<!--            android:hint="Market Price"-->
+<!--            android:paddingStart="30dp"-->
+<!--            android:paddingEnd="30dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/p_price" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/p_price"-->
+<!--            android:layout_width="116dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_below="@id/p_name"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_toEndOf="@id/p_image"-->
+<!--            android:background="@drawable/social_media_btn"-->
+<!--            android:backgroundTint="#FFD600"-->
+<!--            android:hint="Price"-->
+<!--            android:paddingStart="30dp"-->
+<!--            android:paddingEnd="30dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/add_p_description" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/p_stock"-->
+<!--            android:layout_width="65dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_below="@id/p_price"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_toEndOf="@id/p_image"-->
+<!--            android:hint="stock"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/add_p_market_price" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/p_category"-->
+<!--            android:layout_width="136dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_below="@id/p_name"-->
+<!--            android:layout_alignBaseline="@id/p_stock"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_toEndOf="@id/p_stock"-->
+<!--            android:background="@drawable/card_bg_1"-->
+<!--            android:backgroundTint="#CBE6FD"-->
+<!--            android:hint="category"-->
+<!--            android:paddingTop="7dp"-->
+<!--            android:paddingBottom="7dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/p_name" />-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/p_update_stock_btn"-->
+<!--            android:layout_width="117dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="36dp"-->
+<!--            android:layout_marginEnd="76dp"-->
+<!--            android:background="@drawable/card_bg_1"-->
+<!--            android:elevation="5dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Update Stock"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:backgroundTint="#F8FF9F57"-->
+<!--            app:icon="@drawable/ic_round_update_24"-->
+<!--            app:iconGravity="textStart"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/p_stock">-->
+
+<!--        </com.google.android.material.button.MaterialButton>-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/p_delete_product_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="72dp"-->
+<!--            android:layout_marginTop="36dp"-->
+<!--            android:background="@drawable/card_bg_1"-->
+<!--            android:backgroundTintMode="multiply"-->
+<!--            android:elevation="10dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Delete"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:backgroundTint="#C8F81704"-->
+<!--            app:icon="@drawable/ic_delete_outline"-->
+<!--            app:iconGravity="textStart"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/p_stock" />-->
+
+<!--        <View-->
+
+<!--            android:id="@+id/line_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_below="@id/p_delete_product_btn"-->
+<!--            android:background="#777777"-->
+
+<!--            tools:ignore="MissingConstraints" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</RelativeLayout>

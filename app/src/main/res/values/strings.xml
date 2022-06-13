@@ -9,14 +9,14 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="pass">Password</string>
-    <string name="message_welcome_page">Please enter your registered email to continue</string>
-    <string name="title_welcome_page">Welcome!</string>
-    <string name="email">Masukkan Email</string>
+    <string name="message_welcome_page">Business Analytic Daily Income</string>
+    <string name="title_welcome_page">Welcome to BADI!</string>
+    <string name="email">Enter your email</string>
     <string name="language_setting">Language Settings</string>
     <string name="register">REGISTER</string>
     <string name="invalid_email">Invalid Email</string>
     <string name="login">Log In</string>
-    <string name="name">Masukkan Nama</string>
+    <string name="name">Enter name</string>
 
     <string name="register_your_account">Create your account to get the access this app</string>
     <string name="signup">Sign Up</string>
@@ -30,5 +30,49 @@
     <string name="title_history">History</string>
     <string name="title_product">Product</string>
     <string name="title_profile">Account</string>
+
+    <string name="greeting">Halo %1$s,</string>
+    <string name="upload_image">Please Enter your data</string>
+    <string name="name_shop">Enter Shop Name</string>
+    <string name="save">Save And Continue</string>
+    <string name="edit">Edit Profile</string>
+
+
+
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Hapus</string>
+    <string name="date">Date</string>
+
+    <string name="message_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="message_ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="empty">Field can not be blank</string>
+    <string name="update">Update</string>
+    <string name="change">Ubah</string>
+    <string name="add">Tambah</string>
+    <string name="savee">Simpan</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="message_cancel">Apakah anda ingin membatalkan perubahan pada form?</string>
+    <string name="message_delete">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="added">Satu item berhasil ditambahkan</string>
+    <string name="changed">Satu item berhasil diubah</string>
+    <string name="deleted">Satu item berhasil dihapus</string>
+    <string name="splash_screen_app_name">"BADI "</string>
+
+    <string name="one_time_alarm">One Time Alarm</string>
+    <string name="alarm_date">Tanggal Alarm</string>
+    <string name="set_one_time_alarm">Set One Time Alarm</string>
+    <string name="alarm_message">Pesan Alarm</string>
+    <string name="repeating_alarm">Repeating Alarm</string>
+    <string name="set_repeating_alarm">Set Repeating Alarm</string>
+    <string name="cancel_alarm">Cancel Alarm</string>
+    <string name="alarm_time">Time Alarm</string>
+    <string name="alarm_menu">AlarmManager</string>
+    <string name="message_welcome_login_page">First enter your data</string>
+    <string name="nama_barang">Nama Barang</string>
+    <string name="harga">Harga</string>
 
 </resources>

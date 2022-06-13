@@ -18,7 +18,7 @@
 
     <TextView
         style="@style/TextViewBold"
-        android:alpha="0"
+        android:alpha="1"
         android:id="@+id/usernameTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="32dp"
         android:lines="1"
         android:maxLines="1"
-        tools:text="Hello"
+        android:text="Hello, Admin"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -79,16 +79,16 @@
 
     <TextView
         android:id="@+id/tv_home_greetings"
-        android:alpha="0"
         style="@style/TextViewRegular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/home_desc"
+        android:alpha="0"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
 
@@ -103,6 +103,8 @@
         app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

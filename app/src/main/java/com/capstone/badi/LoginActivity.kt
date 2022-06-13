@@ -5,29 +5,27 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.text.TextUtils
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.capstone.badi.databinding.ActivityLoginBinding
-
 import com.google.firebase.auth.FirebaseAuth
-
 
 class LoginActivity : AppCompatActivity() {
 
     //viewBinding
     private lateinit var loginBinding: ActivityLoginBinding
     //viewModel
-
     private lateinit var progressDialog: ProgressDialog
     //firebase
     private lateinit var firebaseAuth: FirebaseAuth
     private var email = ""
     private var password = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
@@ -35,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(loginBinding.root)
 
         playAnimation()
-        buttonSettings()
         supportActionBar?.hide()
 
         //config progressDialog
@@ -46,7 +43,6 @@ class LoginActivity : AppCompatActivity() {
 
         //init firebase
         firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
 
         loginBinding.myButton.setOnClickListener {
             validateData()
@@ -93,7 +89,7 @@ class LoginActivity : AppCompatActivity() {
                     "LoggedIn as $email",
                     Toast.LENGTH_SHORT
                 ).show()
-                startActivity(Intent(this, MainActivity::class.java)).also{}
+                startActivity(Intent(this, MainActivity::class.java))
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 finish()
             }
@@ -106,21 +102,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    private fun checkUser() {
-        //if already logged
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser != null){
-            startActivity(Intent(this, MainActivity::class.java))
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            finish()
-        }
-    }
 
-    private fun buttonSettings() {
-        loginBinding.imgViewSetting.setOnClickListener {
-            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
-        }
-    }
 
 
 

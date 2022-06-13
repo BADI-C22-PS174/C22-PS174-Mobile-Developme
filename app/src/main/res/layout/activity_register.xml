@@ -46,8 +46,8 @@
 
     <TextView
         android:id="@+id/tv_register_greetings"
-        android:layout_width="341dp"
-        android:layout_height="49dp"
+        android:layout_width="339dp"
+        android:layout_height="91dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
@@ -57,41 +57,21 @@
         android:textColor="@color/navi"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/my_edit_text_Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
+
     <EditText
-        android:id="@+id/my_edit_text_name"
+        android:id="@+id/my_edit_text_Email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:autofillHints="namee"
-        android:background="@drawable/bg_input_red"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="16sp"
-        android:paddingEnd="16sp"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_register_greetings"
-        app:layout_constraintVertical_bias="0.065"
-        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/my_edit_text_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints=""
+        android:layout_marginBottom="332dp"
         android:background="@drawable/bg_input_red"
         android:backgroundTint="@color/white"
         android:hint="@string/email"
@@ -102,9 +82,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_edit_text_name"
-        app:layout_constraintVertical_bias="0.026"
-        tools:ignore="TextContrastCheck" />
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TextContrastCheck"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/my_edit_text_pass"
@@ -113,19 +93,19 @@
         android:layout_gravity="start"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="260dp"
         android:background="@drawable/bg_input_red"
+        android:backgroundTint="@color/white"
         android:hint="@string/pass"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingStart="16sp"
         android:paddingEnd="16sp"
-        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_edit_text_email"
-        app:layout_constraintVertical_bias="0.035"
-        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
+        app:passwordToggleEnabled="true"
+        tools:ignore="TextContrastCheck"
         android:autofillHints="" />
 
     <com.capstone.edittext.MyButtonRegister
@@ -144,7 +124,7 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="84dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/navi"
         android:gravity="center"
